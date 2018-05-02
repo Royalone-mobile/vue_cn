@@ -1,0 +1,267 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "id": 247,
+            "openid": "o2KJJwQiTmGN000000MbRsw2Tn_8g",
+            "nickname": "然",
+            "data": [
+                {
+                    "created_at": "2018/04/17</br>07:43:00",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "600",
+                    "win_loss_amount": -600
+                },
+                {
+                    "created_at": "2018/04/17</br>07:33:14",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": -200
+                },
+                {
+                    "created_at": "2018/04/17</br>07:31:12",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": -200
+                },
+                {
+                    "created_at": "2018/04/17</br>07:30:19",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": 0
+                },
+                {
+                    "created_at": "2018/04/17</br>07:16:27",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": -200
+                },
+                {
+                    "created_at": "2018/04/17</br>07:15:22",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": 200
+                }
+            ]
+        },
+        {
+            "id": 252,
+            "openid": "o2KJJwRrmn00000JJNp8QE310TEM",
+            "nickname": "八弟",
+            "data": [
+                {
+                    "created_at": "2018/04/17</br>04:24:28",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "100",
+                    "win_loss_amount": -100
+                },
+                {
+                    "created_at": "2018/04/17</br>04:24:26",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": -200
+                },
+                {
+                    "created_at": "2018/04/17</br>04:24:24",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "300",
+                    "win_loss_amount": -300
+                },
+                {
+                    "created_at": "2018/04/17</br>04:24:21",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "600",
+                    "win_loss_amount": 600
+                },
+                {
+                    "created_at": "2018/04/17</br>04:18:15",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "300",
+                    "win_loss_amount": -300
+                },
+                {
+                    "created_at": "2018/04/13</br>09:07:55",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "1000",
+                    "win_loss_amount": -1000
+                }
+            ]
+        },
+        {
+            "id": 251,
+            "openid": "o2KJJwS7e00000R7zA8ONEwfhmco",
+            "nickname": "mike",
+            "data": []
+        },
+        {
+            "id": 245,
+            "openid": "o2KJJwT0G00000Y1m4gbbq9eEvbY",
+            "nickname": "薇",
+            "data": [
+                {
+                    "created_at": "2018/04/13</br>23:01:03",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "500",
+                    "win_loss_amount": -500
+                },
+                {
+                    "created_at": "2018/04/13</br>22:59:26",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "300",
+                    "win_loss_amount": -300
+                },
+                {
+                    "created_at": "2018/04/13</br>22:57:16",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": 190
+                },
+                {
+                    "created_at": "2018/04/13</br>22:55:55",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": -200
+                },
+                {
+                    "created_at": "2018/04/13</br>22:12:45",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "300",
+                    "win_loss_amount": -300
+                },
+                {
+                    "created_at": "2018/04/13</br>22:11:18",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "200",
+                    "win_loss_amount": -200
+                }
+            ]
+        },
+        {
+            "id": 246,
+            "openid": "o2KJJwYL1a00000O5OcVwejtnFos",
+            "nickname": "Shang",
+            "data": [
+                {
+                    "created_at": "2018/04/15</br>21:37:59",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "2000",
+                    "win_loss_amount": -2000
+                },
+                {
+                    "created_at": "2018/04/15</br>21:35:45",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "2000",
+                    "win_loss_amount": -2000
+                },
+                {
+                    "created_at": "2018/04/15</br>17:44:03",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "300",
+                    "win_loss_amount": 300
+                },
+                {
+                    "created_at": "2018/04/15</br>16:30:01",
+                    "game_name": "龙虎",
+                    "valid_bet_amount": "5950",
+                    "win_loss_amount": -5950
+                },
+                {
+                    "created_at": "2018/04/15</br>16:29:04",
+                    "game_name": "龙虎",
+                    "valid_bet_amount": "7000",
+                    "win_loss_amount": -7000
+                },
+                {
+                    "created_at": "2018/04/15</br>16:28:25",
+                    "game_name": "龙虎",
+                    "valid_bet_amount": "3000",
+                    "win_loss_amount": -3000
+                }
+            ]
+        },
+        {
+            "id": 248,
+            "openid": "o2KJJwZ00000-wRLrfe2QSHq1jm0",
+            "nickname": "東東",
+            "data": [
+                {
+                    "created_at": "2018/04/15</br>20:58:37",
+                    "game_name": "北京赛车",
+                    "valid_bet_amount": "1000",
+                    "win_loss_amount": 970
+                },
+                {
+                    "created_at": "2018/04/15</br>20:46:25",
+                    "game_name": "北京赛车",
+                    "valid_bet_amount": "400",
+                    "win_loss_amount": 3520
+                },
+                {
+                    "created_at": "2018/04/15</br>20:45:11",
+                    "game_name": "北京赛车",
+                    "valid_bet_amount": "500",
+                    "win_loss_amount": 485
+                },
+                {
+                    "created_at": "2018/04/15</br>20:45:03",
+                    "game_name": "北京赛车",
+                    "valid_bet_amount": "500",
+                    "win_loss_amount": 485
+                }
+            ]
+        },
+        {
+            "id": 250,
+            "openid": "o2KJJwZTuQeo00000eo17FSdA5Os",
+            "nickname": "凱阿",
+            "data": [
+                {
+                    "created_at": "2018/04/16</br>00:07:19",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "1000",
+                    "win_loss_amount": -1000
+                },
+                {
+                    "created_at": "2018/04/16</br>00:07:16",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "1000",
+                    "win_loss_amount": -1000
+                },
+                {
+                    "created_at": "2018/04/16</br>00:07:11",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "1000",
+                    "win_loss_amount": -1000
+                },
+                {
+                    "created_at": "2018/04/16</br>00:07:08",
+                    "game_name": "微投百家乐",
+                    "valid_bet_amount": "1000",
+                    "win_loss_amount": -1000
+                },
+                {
+                    "created_at": "2018/04/15</br>23:56:26",
+                    "game_name": "北京赛车",
+                    "valid_bet_amount": "3000",
+                    "win_loss_amount": -3000
+                },
+                {
+                    "created_at": "2018/04/15</br>23:55:39",
+                    "game_name": "北京赛车",
+                    "valid_bet_amount": "5000",
+                    "win_loss_amount": -5000
+                }
+            ]
+        }
+    ],
+    "first_page_url": "http://localhost/demo/agent?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "http://localhost/demo/agent?page=1",
+    "next_page_url": null,
+    "path": "http://localhost/demo/agent",
+    "per_page": 10,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7
+}

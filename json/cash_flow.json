@@ -1,0 +1,63 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "created_at": "2018/04/14</br>06:43:26",
+            "remark": "佣金转入钱包",
+            "income": "150.00",
+            "expenses": ""
+        },
+        {
+            "created_at": "2018/04/10</br>18:11:39",
+            "remark": "提现拒绝退款",
+            "income": "120.00",
+            "expenses": ""
+        },
+        {
+            "created_at": "2018/04/10</br>18:11:34",
+            "remark": "提现拒绝退款",
+            "income": "225.00",
+            "expenses": ""
+        },
+        {
+            "created_at": "2018/04/10</br>18:10:33",
+            "remark": "申请提现预扣",
+            "income": "",
+            "expenses": "-225.00"
+        },
+        {
+            "created_at": "2018/04/10</br>18:09:38",
+            "remark": "申请提现预扣",
+            "income": "",
+            "expenses": "-120.00"
+        },
+        {
+            "created_at": "2018/04/09</br>20:46:07",
+            "remark": "百家乐派彩",
+            "income": "400.00",
+            "expenses": ""
+        },
+        {
+            "created_at": "2018/04/09</br>20:45:45",
+            "remark": "百家乐下注",
+            "income": "",
+            "expenses": "-200.00"
+        },
+        {
+            "created_at": "2018/04/09</br>19:06:53",
+            "remark": "充值申请通过",
+            "income": "18000.00",
+            "expenses": ""
+        }
+    ],
+    "first_page_url": "http://localhost/demo/cash_flow?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "http://localhost/demo/cash_flow?page=1",
+    "next_page_url": null,
+    "path": "http://localhost/demo/cash_flow",
+    "per_page": 10,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8
+}

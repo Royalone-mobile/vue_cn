@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="env" content="stage">
+    <meta name="csrf-token" content="ZeQipUdvBNrJPGLcfKIEuKmvLgjaEInNkWLn1ya0">
+    <meta name="notify-msg" content="">
+    <meta name="notify-type" content="">
+    <link rel='stylesheet prefetch' href='resource/bootstrap/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css?id=7d13c156c6c8bdaf6193">
+    <!-- <link rel="stylesheet" type="text/css" href="css/game_hall.css?id=7d13c156c6c8bdaf6193"> -->
+    <link rel="stylesheet" type="text/css" href="css/game_hall_new.css?id=7d13c156c6c8bdaf6193">
+    <title>WM 微信投注游戏大厅</title>
+    <script src="resource/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src='resource/bootstrap/js/bootstrap.min.js'></script> -->
+    <script src='js/imagesloaded.pkgd.min.js'></script>
+    <script src='js/swiper.min.js'></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
+    <script src="js/vue-2.5.17.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/http-vue-loader@1.3.2"></script>
+    <!-- <script src="js/httpVueLoader.js" type="text/javascript"></script> -->
+
+    <script>
+        window.langName = 'cn';
+    </script>
+</head>
+
+<body ontouchstart="" class="no-scroll">
+    <!-- loading box -->
+    <div class="pages-loading-box home" style="display: block;">
+        <div class="loading-icon">
+            <div class="half-circle-spinner">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+            </div>
+        </div>
+        <div id="pages-loading-banner" class="pages-loading-banner">
+            <div class="swiper-container guide-swiper-container">
+                <div class="swiper-wrapper guide-photo-wrapper">
+                    <div class="swiper-slide guide-photo">
+                        <img src="images/loading/guide-2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide guide-photo">
+                        <img src="images/loading/guide-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <a class="btn pages-loading-enter off">
+                <span>跳过</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="main-container" id="root-app">
+        <div class="context home-context">
+            <!-- 頂部固定區 -->
+            <div class="home-fix-top-box">
+                <a data-page-name="news" class="btn-news btn-pages">
+                    <span class="btn-news-icon new-news"></span>
+                </a>
+                <div class="home-marquee">
+                    <p>欢迎来到WM微投，可添加WM客服微信:wm000 ,将有专人为您服务</p>
+                </div>
+            </div>
+            <!-- 廣告輪播區 -->
+            <div class="home-swiper-wrapper">
+                <a id="btn-language" data-pop="lang-dialog" class="btn-pop btn-language cn">
+                    <span class="language-flag-icon flag-icon"></span>
+                </a>
+                <a id="btn-sound" class="btn-sound">
+                    <span class="sound-icon"></span>
+                </a>
+                <div class="swiper-container home-swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/b_rc.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/b_sp.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/b_lo.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/b_sl.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!-- 中間按鈕條 -->
+            <div class="home-link-bar">
+                <a data-pop="about-dialog" class="home-link-btn about-wm btn-pop">
+                    <span>关于</span>
+                    <i class="wm-icon"></i>
+                </a>
+                <a data-page-name="wallet-center" class="home-link-btn btn-pages">
+                    <span>充提中心</span>
+                </a>
+                <a class="home-link-btn free-play">
+                    <span>免费试玩</span>
+                </a>
+            </div>
+            <!-- 主項目 -->
+            <div class="home-content">
+                <!-- 遊戲清單 -->
+                <div class="gamelist-wrapper">
+                    <div class="gamelist-row">
+                        <div class="gamelist-col">
+                            <a class="gamelist-item column hot">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i101.png)"></div>
+                                <div class="game-name">微投百家</div>
+                            </a>
+                        </div>
+                        <div class="gamelist-col">
+                            <a class="gamelist-item">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i102.png)"></div>
+                                <div class="game-name">微投龙虎</div>
+                            </a>
+                            <a class="gamelist-item">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i104.png)"></div>
+                                <div class="game-name">微投轮盘</div>
+                            </a>
+                        </div>
+                        <div class="gamelist-col">
+                            <a class="gamelist-item">
+                                <div class="game-image h" style="background-image: url(resource/images/mid_i103.png)"></div>
+                                <div class="game-name">微投骰宝</div>
+                            </a>
+                            <a class="gamelist-item">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i105.png)"></div>
+                                <div class="game-name">微投牛牛</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gamelist-row">
+                        <div class="gamelist-col">
+                            <a class="gamelist-item column hot">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i201.png)"></div>
+                                <div class="game-name">微投利鑫彩票</div>
+                            </a>
+                        </div>
+                        <div class="gamelist-col">
+                            <a class="gamelist-item">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i202.png)"></div>
+                                <div class="game-name">VR
+                                    <br> 直播彩票
+                                </div>
+                            </a>
+                            <a class="gamelist-item new">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i204.png)"></div>
+                                <div class="game-name">WM体育</div>
+                            </a>
+                        </div>
+                        <div class="gamelist-col">
+                            <a class="gamelist-item">
+                                <div class="game-image h" style="background-image: url(resource/images/mid_i203.png);"></div>
+                                <div class="game-name">微投
+                                    <br> 北京赛车
+                                </div>
+                            </a>
+                            <a class="gamelist-item">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i205.png)"></div>
+                                <div class="game-name">竞猜体育</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gamelist-row">
+                        <div class="gamelist-col">
+                            <a class="gamelist-item column">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i301.png)"></div>
+                                <div class="game-name">直播老虎机</div>
+                            </a>
+                        </div>
+                        <div class="gamelist-col">
+                            <a class="gamelist-item">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i302.png)"></div>
+                                <div class="game-name">PlaynGo
+                                    <br> 老虎机
+                                </div>
+                            </a>
+                            <a data-pop="about-dialog" class="gamelist-item btn-pop">
+                                <div class="game-image svg" style="background-image: url(resource/images/svg/mid_i304.svg)"></div>
+                                <div class="game-name">代理加盟</div>
+                            </a>
+                        </div>
+                        <div class="gamelist-col">
+                            <a class="gamelist-item">
+                                <div class="game-image" style="background-image: url(resource/images/mid_i303.png)"></div>
+                                <div class="game-name">直播斗鸡</div>
+                            </a>
+                            <a data-pop="invite-dialog" class="gamelist-item btn-pop">
+                                <div class="game-image svg" style="background-image: url(resource/images/svg/mid_i305.svg)"></div>
+                                <div class="game-name">邀请好友</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 活動區塊 -->
+                <div class="event-photos">
+                    <div class="event-row">
+                        <div class="event-col col-100">
+                            <img src="images/event/event_01.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="event-row">
+                        <div class="event-col col-100">
+                            <img src="images/event/event_02.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部按鈕 -->
+            <div class="home-fix-bottom-box">
+                <a data-menu="home" class="fix-bottom-btn active">
+                    <span class="fix-bottom-btn-icon btn-1"></span>
+                    <strong>大厅</strong>
+                </a>
+                <a data-page-name="user-center" data-menu="user" class="fix-bottom-btn btn-pages">
+                    <span class="fix-bottom-btn-icon btn-2"></span>
+                    <strong>个人中心</strong>
+                </a>
+                <a data-menu="mobile" data-pop="mobile-dialog" class="fix-bottom-btn mobile-download btn-pop">
+                    <span class="fix-bottom-btn-icon btn-3"></span>
+                    <strong>手机下载</strong>
+                </a>
+                <a data-menu="event" data-pop="event-dialog" class="fix-bottom-btn btn-pop">
+                    <span class="fix-bottom-btn-icon btn-4 new-news"></span>
+                    <strong>优惠活动</strong>
+                </a>
+                <a data-menu="service" data-pop="service-dialog" class="fix-bottom-btn btn-service btn-pop">
+                    <span class="fix-bottom-btn-icon btn-5"></span>
+                    <strong>在线客服</strong>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- pages content -->
+    <div class="pages-container">
+        <a class="close-btn"></a>
+        <!-- 個人中心 -->
+        <div data-page-name="user-center" class="pages-main page-user-center-main">
+            <div class="pages-header">
+                <h1>个人中心</h1>
+            </div>
+            <div class="pages-content">
+                <div class="member-wrapper">
+                    <div class="member-col member-person">
+                        <div class="avatar person_desc" style="background-image: url(http://thirdwx.qlogo.cn/mmopen/vi_32/O5whRT78Nia9zGzXUiaFZDq45HbBBB9YNLtAb20Zia5Nq1ENzwo7qqumQT0B1mepF4UjmCmHg86Su7vdyEzxKfzUg/132)">
+                        </div>
+                        <p class="person-name">Hank Chang</p>
+                    </div>
+                    <div class="member-col member-wallet">
+                        <p class="member-wallet-list-name">
+                            <span class="mark-name">现金余额</span>
+                            <span>信用额度</span>
+                        </p>
+                        <p class="member-wallet-list-data">
+                            <strong class="mark-txt">100.00</strong>
+                            <strong>10000</strong>
+                        </p>
+                    </div>
+                    <div class="member-col member-btns">
+                        <a data-pop="acc-other-dialog" class="ohter-member-btn user-center-btn btn-pop">使用其他帐户</a>
+                        <a class="member-logout-btn">登出</a>
+                    </div>
+                </div>
+                <div class="user-center-wrapper">
+                    <a data-pop="recharge-dialog" class="user-center-item item-1 user-center-btn btn-pop">
+                        <span>充值</span>
+                    </a>
+                    <a data-pop="withdraw-dialog" class="user-center-item item-2 user-center-btn  btn-pop">
+                        <span>提现</span>
+                    </a>
+                    <a data-pop="event-dialog" class="user-center-item item-3 user-center-btn btn-pop">
+                        <span>活动中心</span>
+                    </a>
+                    <a data-page-name="accounting-records" class="user-center-item item-4 btn-pages">
+                        <p class="user-center-item-tip">10</p>
+                        <span>帐变纪录</span>
+                    </a>
+                    <a data-page-name="person-report" class="user-center-item item-5 btn-pages">
+                        <span>个人报表</span>
+                    </a>
+                    <a data-page-name="member-manager" class="user-center-item item-6 btn-pages">
+                        <span>信用专区</span>
+                    </a>
+                    <a data-page-name="invite-report" class="user-center-item item-7 btn-pages">
+                        <span>推广查询</span>
+                    </a>
+                    <a data-page-name="security-settings" class="user-center-item item-8 btn-pages">
+                        <span>安全设置</span>
+                    </a>
+                    <a data-page-name="news" class="user-center-item item-9 btn-pages">
+                        <p class="user-center-item-tip">10</p>
+                        <span>讯息公告</span>
+                    </a>
+                    <a data-pop="service-dialog" class="user-center-item item-10 btn-pop">
+                        <span>联系客服</span>
+                    </a>
+                    <a data-pop="about-dialog" class="user-center-item item-11 user-center-btn btn-pop">
+                        <span>关于WM</span>
+                    </a>
+                    <a data-pop="invite-dialog" class="user-center-item item-12 user-center-btn btn-pop">
+                        <span>邀请好友</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 公告 -->
+        <div data-page-name="news" class="pages-main news-main">
+            <div class="pages-header">
+                <h1>讯息公告</h1>
+            </div>
+            <div class="pages-content">
+                <div class="news-wrapper">
+                    <div class="tab-box">
+                        <a class="tab-btn active">
+                            <span>系统公告</span>
+                        </a>
+                        <a class="tab-btn">
+                            <span>我的短信</span>
+                        </a>
+                    </div>
+                    <div class="news-con-main">
+                        <div class="news-con news-system">
+                            <!-- 內容 -->
+                            <div class="news-article-box">
+                                <p class="news-date">2017-03-20</p>
+                                <div class="news-article hidden">
+                                    <h1 class="title">公告标题公告标题公告标题</h1>
+                                    <p class="content">公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文</p>
+                                    <a class="switch-btn">
+                                        <span>阅读全文</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news-article-box">
+                                <p class="news-date">2017-03-20</p>
+                                <div class="news-article hidden">
+                                    <h1 class="title">公告标题公告标题公告标题</h1>
+                                    <p class="content">公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文</p>
+                                    <a class="switch-btn">
+                                        <span>阅读全文</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news-article-box">
+                                <p class="news-date">2017-03-20</p>
+                                <div class="news-article hidden">
+                                    <h1 class="title">公告标题公告标题公告标题</h1>
+                                    <p class="content">公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文</p>
+                                    <a class="switch-btn">
+                                        <span>阅读全文</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news-article-box">
+                                <p class="news-date">2017-03-20</p>
+                                <div class="news-article hidden">
+                                    <h1 class="title">公告标题公告标题公告标题</h1>
+                                    <p class="content">公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文</p>
+                                    <a class="switch-btn">
+                                        <span>阅读全文</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news-article-box">
+                                <p class="news-date">2017-03-20</p>
+                                <div class="news-article hidden">
+                                    <h1 class="title">公告标题公告标题公告标题</h1>
+                                    <p class="content">公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文</p>
+                                    <a class="switch-btn">
+                                        <span>阅读全文</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="news-article-box">
+                                <p class="news-date">2017-03-20</p>
+                                <div class="news-article hidden">
+                                    <h1 class="title">公告标题公告标题公告标题</h1>
+                                    <p class="content">公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文公告内文</p>
+                                    <a class="switch-btn">
+                                        <span>阅读全文</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 安全設置 -->
+        <div data-page-name="security-settings" class="pages-main security-main">
+            <div class="pages-header">
+                <h1>安全设置</h1>
+            </div>
+            <div class="pages-content">
+                <div class="security-settings-wrapper">
+                    <div class="wm-intro-box">
+                        <h1 class="logo"></h1>
+                        <p>WM微投是您最佳的选择</p>
+                    </div>
+                    <div class="security-list">
+                        <a class="security-item password-login">
+                            <span>修改登入密码</span>
+                        </a>
+                        <a class="security-item password-wallet">
+                            <span>修改提现密码</span>
+                        </a>
+                        <!-- <a class="security-item password-getback">
+                            <span>密码找回</span>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 充值中心 -->
+        <div data-page-name="wallet-center" class="pages-main wallet-center-main">
+            <div class="pages-header">
+                <h1>充值中心</h1>
+            </div>
+            <div class="pages-content">
+                <div class="wallet-center-wrapper">
+                    <div class="wallet-center-list">
+                        <a data-pop="recharge-dialog" class="list-item btn-pop">
+                            <div class="icon icon1">
+                                <span>充值</span>
+                            </div>
+                        </a>
+                        <a data-pop="withdraw-dialog" class="list-item btn-pop">
+                            <div class="icon icon2">
+                                <span>提现</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="wallet-records-con">
+                        <h1>充值提現紀錄</h1>
+                        <table class="acc-table acc-table-1">
+                            <thead>
+                                <tr>
+                                    <th class="aleft">日期</th>
+                                    <th class="acenter">內容</th>
+                                    <th class="acenter">狀態</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="aleft">2018-03-11 13:43:23</td>
+                                    <td class="acenter">充值</td>
+                                    <td class="acenter">
+                                        <p class="txt-green">已儲值</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="aleft">2018-03-11 13:43:23</td>
+                                    <td class="acenter">充值</td>
+                                    <td class="acenter">
+                                        <p class="txt-green">已儲值</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="aleft">2018-03-11 13:43:23</td>
+                                    <td class="acenter">提現</td>
+                                    <td class="acenter">
+                                        <p class="txt-red">已拒絕</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="aleft">2018-03-11 13:43:23</td>
+                                    <td class="acenter">提現</td>
+                                    <td class="acenter">
+                                        <p class="">待處理</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 信用專區 -->
+        <div data-page-name="member-manager" class="pages-main member-manager">
+            <div class="pages-header">
+                <h1>信用专区</h1>
+            </div>
+            <div class="pages-content">
+                <div class="member-manager-wrapper">
+                    <!-- 信用專區內容未定 -->
+                    <p style="width: 100vw; max-width: 620px; margin-left: -20px; background: #000; height: 40px; line-height:40px; text-align: center;">即将推出</p>
+                    <div class="member-manager-list">
+                        <a class="member-manager-item">
+                            <div class="icon icon1">
+                                <span>新增下线</span>
+                            </div>
+                        </a>
+                        <a class="member-manager-item">
+                            <div class="icon icon2">
+                                <span>新增代理</span>
+                            </div>
+                        </a>
+                        <a data-page-name="layer-member" class="member-manager-item btn-pages">
+                            <div class="icon icon3">
+                                <span>下线列表</span>
+                            </div>
+                        </a>
+                        <a class="member-manager-item">
+                            <div class="icon icon4">
+                                <span>代理列表</span>
+                            </div>
+                        </a>
+                        <a data-page-name="layer-member-report" class="member-manager-item btn-pages">
+                            <div class="icon icon5">
+                                <span>报表查询</span>
+                            </div>
+                        </a>
+                        <a style="opacity: .3" class="member-manager-item">
+                            <div class="icon">
+                                <span style="opacity: 0">----</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 變帳紀錄 -->
+        <div data-page-name="accounting-records" class="pages-main accounting-records">
+            <div class="pages-header">
+                <h1>变帐纪录</h1>
+            </div>
+            <div id="app_change_account_history">
+                <cash-flow-list></cash-flow-list>
+            </div>
+        </div>
+        <!-- 個人報表 -->
+        <div data-page-name="person-report" class="pages-main person-report">
+            <div class="pages-header">
+                <h1>个人报表</h1>
+            </div>
+            <div id="app_personal_report">
+                <bet-log-list></bet-log-list>
+            </div>
+        </div>    
+        
+        <!-- 下級列表 -->
+        <div data-page-name="layer-member" class="pages-main scroll layer-member">
+            <div class="pages-header">
+                <h1>下线列表</h1>
+            </div>
+            <div class="pages-content">
+                <div class="layer-member-wrapper">
+                    <div class="data-table-con">
+                        <table class="acc-table acc-table-1">
+                            <thead>
+                                <tr>
+                                    <th>用户名 </th>
+                                    <th class="aright">信用额度</th>
+                                    <th class="aright">剩余额度</th>
+                                    <th class="aright">查看</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>a234567891012</td>
+                                    <td class="aright">
+                                        <p class="txt-green">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <p class="txt-red">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <a class="btn-more"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>a234567891012</td>
+                                    <td class="aright">
+                                        <p class="txt-green">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <p class="txt-red">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <a class="btn-more"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>a234567891012</td>
+                                    <td class="aright">
+                                        <p class="txt-green">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <p class="txt-red">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <a class="btn-more"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>a234567891012</td>
+                                    <td class="aright">
+                                        <p class="txt-green">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <p class="txt-red">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <a class="btn-more"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>a234567891012</td>
+                                    <td class="aright">
+                                        <p class="txt-green">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <p class="txt-red">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <a class="btn-more"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>a234567891012</td>
+                                    <td class="aright">
+                                        <p class="txt-green">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <p class="txt-red">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <a class="btn-more"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>a234567891012</td>
+                                    <td class="aright">
+                                        <p class="txt-green">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <p class="txt-red">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <a class="btn-more"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>a234567891012</td>
+                                    <td class="aright">
+                                        <p class="txt-green">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <p class="txt-red">500,000,000</p>
+                                    </td>
+                                    <td class="aright">
+                                        <a class="btn-more"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 下线/代理 报表 -->
+        <div data-page-name="layer-member-report" class="pages-main scroll layer-member-report">
+            <div class="pages-header">
+                <h1>下线/代理 报表查询</h1>
+            </div>
+            <div id="app_offline_proxy_report">
+                <agent-list></agent-list>
+            </div>
+        </div>
+        <!-- 推廣查詢-->
+        <div data-page-name="invite-report" class="pages-main scroll invite-report">
+            <div class="pages-header">
+                <h1>推广查询</h1>
+            </div>
+            <div class="pages-content">
+                <div class="invite-report-wrapper">
+                    <div class="tab-box">
+                        <a class="tab-btn active">
+                            <span>成功邀请</span>
+                        </a>
+                        <a class="tab-btn">
+                            <span>未接收</span>
+                        </a>
+                    </div>
+                    <div class="sub-con-main">
+                        <div class="invite-data-con">
+                            <p>成功邀请
+                                <span>6</span> &nbsp;&nbsp;&nbsp; 历史收益:
+                                <span class="txt-green">60</span>
+                            </p>
+                            <table class="acc-table acc-table-1">
+                                <thead>
+                                    <tr>
+                                        <th class="aleft">日期</th>
+                                        <th class="aleft">类型</th>
+                                        <th class="aleft">帐号</th>
+                                        <th class="aright">状态</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aleft">2018-03-15</td>
+                                        <td class="aleft">QQ</td>
+                                        <td class="aleft">12457896@qq.com</td>
+                                        <td class="aright">
+                                            <p class="txt-green">获得10币</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 活動內頁圖 -->
+    <div id="event-scroll-banner" class="swiper-container event-swiper-container">
+        <div class="event-banner-list swiper-wrapper event-swiper-wrapper">
+            <div class="swiper-slide event-banner-box">
+                <a class="event-banner-close-btn"></a>
+                <div class="event-photo">
+                    <img src="images/event/pre_01.jpg" alt="">
+                </div>
+                <div class="event-pagination"></div>
+                <div class="event-intro">
+                    <h3 class="event-title">下载APP领奖金!</h3>
+                    <p>活动内容活动内容,活动内容活动内容活动内容活动内容活动内容活动内容,活动内容活动内容活动内容! 活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide event-banner-box">
+                <a class="event-banner-close-btn"></a>
+                <div class="event-photo">
+                    <img src="images/event/pre_02.jpg" alt="">
+                </div>
+                <div class="event-pagination"></div>
+                <div class="event-intro">
+                    <h3 class="event-title">绑定网址领奖金</h3>
+                    <p>活动内容活动内容,活动内容活动内容活动内容活动内容活动内容活动内容,活动内容活动内容活动内容! 活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide event-banner-box">
+                <a class="event-banner-close-btn"></a>
+                <div class="event-photo">
+                    <img src="images/event/pre_03.jpg" alt="">
+                </div>
+                <div class="event-pagination"></div>
+                <div class="event-intro">
+                    <h3 class="event-title">加入主画面领奖金</h3>
+                    <p>活动内容活动内容,活动内容活动内容活动内容活动内容活动内容活动内容,活动内容活动内容活动内容! 活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!活动内容活动内容活动内容!
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide event-banner-box">
+                <a class="event-banner-close-btn"></a>
+                <div class="event-photo">
+                    <img src="images/event/pre_04.png" alt="">
+                </div>
+                <div class="event-pagination"></div>
+                <div class="event-intro">
+                    <div class="invite-wrap">
+                        <div class="invite-code">
+                            <p>您的邀请码</p>
+                            <p class="invite-code-txt">A</p>
+                            <p class="invite-code-txt">Q</p>
+                            <p class="invite-code-txt">2</p>
+                            <p class="invite-code-txt">4</p>
+                        </div>
+                        <div class="invite-content">
+                            <p>邀请您的好友来分享
+                                <span class="mark-txt">WM微博投注</span>的精彩吧! 您和好友即可获得
+                                <span class="mark-txt">10币!</span>
+                            </p>
+                        </div>
+                        <div class="invite-tip">
+                            <p>一键邀请</p>
+                        </div>
+                        <div class="invite-link">
+                            <a class="invite-link-btn link-btn-1"></a>
+                            <a class="invite-link-btn link-btn-2"></a>
+                            <a class="invite-link-btn link-btn-3"></a>
+                            <a class="invite-link-btn link-btn-4"></a>
+                            <a class="invite-link-btn link-btn-5"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <!-- 活動視窗 -->
+    <div id="event-dialog" class="modal after-close event-dialog fade">
+        <div class="modal-dialog">
+            <div class="modal-title">优惠活动</div>
+            <div class="modal-content">
+                <div class="event-item-list">
+                    <a class="event-item hot">
+                        <span>下载APP领奖金</span>
+                    </a>
+                    <a class="event-item hot">
+                        <span>绑定网址领奖金</span>
+                    </a>
+                    <a class="event-item hot">
+                        <span>加入主画面领奖金</span>
+                    </a>
+                    <a class="event-item">
+                        <span>推广朋友领奖金</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a data-pop='event-dialog' class="modal-close btn-close"></a>
+    </div>
+
+    <!-- 手機下載視窗 -->
+    <div id="mobile-dialog" class="modal after-close mobile-dialog fade">
+        <div class="modal-dialog">
+            <div class="modal-content h100">
+                <div class="mobile-download-wrap">
+                    <img width="100%" src="images/mobile_download_01.png" alt="">
+                    <h3 class="mobile-download-title">下载APP领奖金!</h3>
+                    <a class="go-stroe-btn">前往 APP Store</a>
+                </div>
+            </div>
+        </div>
+        <a data-pop='mobile-dialog' class="modal-close btn-close"></a>
+    </div>
+
+    <!-- 邀請好友視窗 -->
+    <div id="invite-dialog" class="modal after-close invite-dialog fade">
+        <div class="modal-dialog">
+            <div class="modal-content h100">
+                <div class="invite-wrap">
+                    <div class="invite-photo">
+                        <img src="images/event/pre_04.png" alt="">
+                    </div>
+                    <div class="invite-code">
+                        <p>您的邀请码</p>
+                        <p class="invite-code-txt">A</p>
+                        <p class="invite-code-txt">Q</p>
+                        <p class="invite-code-txt">2</p>
+                        <p class="invite-code-txt">4</p>
+                    </div>
+                    <div class="invite-content">
+                        <p>邀请您的好友来分享
+                            <span class="mark-txt">WM微博投注</span>的精彩吧! 您和好友即可获得
+                            <span class="mark-txt">10币!</span>
+                        </p>
+                    </div>
+                    <div class="invite-tip">
+                        <p>一键邀请</p>
+                    </div>
+                    <div class="invite-link">
+                        <a class="invite-link-btn link-btn-1"></a>
+                        <a class="invite-link-btn link-btn-2"></a>
+                        <a class="invite-link-btn link-btn-3"></a>
+                        <a class="invite-link-btn link-btn-4"></a>
+                        <a class="invite-link-btn link-btn-5"></a>
+                    </div>
+                    <a class="invite-records-btn">查看邀请纪录</a>
+                </div>
+
+            </div>
+        </div>
+        <a data-pop='invite-dialog' class="modal-close btn-close"></a>
+    </div>
+
+    <!-- 充值金幣視窗 -->
+    <div id="recharge-dialog" class="modal after-close recharge-dialog fade">
+        <div class="modal-dialog">
+            <div class="modal-title">充值金币</div>
+            <div class="modal-content">
+                <div class="recharge-wrap">
+                    <div class="recharge-tab-btns">
+                        <a class="recharge-item-btns wechat active"></a>
+                        <a class="recharge-item-btns alipay"></a>
+                        <a class="recharge-item-btns other"></a>
+                    </div>
+                    <div class="recharge-con-main">
+                        <div class="recharge-con recharge-wechat active">
+                            <div class="recharge-money-list">
+                                <a class="recharge-money-item">
+                                    <div class="col money-icon hot"></div>
+                                    <div class="col money-intro">
+                                        <p>100币</p>
+                                        <p>首充送100币</p>
+                                    </div>
+                                    <div class="col money-num">
+                                        <p>￥10.00</p>
+                                    </div>
+                                </a>
+                                <a class="recharge-money-item">
+                                    <div class="col money-icon hot hot2"></div>
+                                    <div class="col money-intro">
+                                        <p>100币</p>
+                                        <p>首充送100币</p>
+                                    </div>
+                                    <div class="col money-num">
+                                        <p>￥10.00</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recharge-forms">
+                                <div class="recharge-custom-input-box">
+                                    <input type="text" placeholder="输入金额:">
+                                    <a class="clear-btn"></a>
+                                </div>
+                                <a class="recharge-submit">确认支付</a>
+                                <p class="recharge-user-mony">
+                                    <span>现金余额</span>
+                                    <strong>100.00</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a data-pop='recharge-dialog' class="modal-close btn-close"></a>
+    </div>
+
+    <!-- 提現視窗 -->
+    <div id="withdraw-dialog" class="modal after-close withdraw-dialog fade">
+        <div class="modal-dialog">
+            <div class="modal-title">提现请求</div>
+            <div class="modal-content">
+                <div class="recharge-wrap">
+                    <div class="recharge-forms">
+                        <div class="recharge-custom-input-box">
+                            <input type="text" placeholder="输入金额:">
+                            <a class="clear-btn"></a>
+                        </div>
+                        <a class="recharge-submit">送出</a>
+                        <a class="recharge-cancel">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a data-pop='withdraw-dialog' class="modal-close btn-close"></a>
+    </div>
+
+    <!-- 關於WM -->
+    <div id="about-dialog" class="modal after-close about-dialog fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="about-wrap">
+                    <div class="row">
+                        <a href="http://wm-casino.com" target="blank">
+                            <img src="images/about/about_img01.jpg" alt="WM完美娱乐">
+                        </a>
+                        <h1>跨足实体赌场、多方位博彩园区</h1>
+                        <p>WM完美娱乐所提供的产品和服务均由柬埔寨政府（Democratic Kampuchea）授权和监管，并拥有实体赌场营业执照。</p>
+                    </div>
+                    <div class="row">
+                        <a href="http://lixin588.com/" target="blank">
+                            <img src="images/about/about_img02.jpg" alt="WM加盟介紹">
+                        </a>
+                        <h1>自有独立现金网系统平台,让代理安心经营</h1>
+                        <p>ＷＭ将与科技平台做结合，与您一起打造最完美的人生，领先他人就趁现在！联系我们,成功即在弹指之间。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a data-pop='about-dialog' class="modal-close btn-close"></a>
+    </div>
+
+    <!-- 帳戶登入視窗 -->
+    <div id="acc-other-dialog" class="modal after-close acc-other-dialog fade">
+        <div class="modal-dialog">
+            <div class="modal-content h100">
+                <div class="acc-other-wrap">
+                    <h1 class="acc-other-title">使用第三方号登录</h1>
+                    <div class="acc-other-list">
+                        <a class="acc-other-icon icon1"></a>
+                        <a class="acc-other-icon icon2"></a>
+                        <a class="acc-other-icon icon3"></a>
+                        <a class="acc-other-icon icon4"></a>
+                        <a class="acc-other-icon icon5"></a>
+                    </div>
+                    <h6>
+                        <span>使用手机号/邮箱注册</span>
+                    </h6>
+                    <div class="acc-other-forms">
+                        <input type="text" placeholder="输入手机号或邮箱">
+                        <input type="password" placeholder="密码">
+                        <a class="login-btn">登录</a>
+                    </div>
+                    <div class="registered-footer">
+                        <a class="registered-forget-btn">
+                            <span>找回密码</span>
+                        </a>
+                        <a class="registered-txt-btn">
+                            <span>点击注册WM帐号></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a data-pop='acc-other-dialog' class="modal-close btn-close"></a>
+    </div>
+
+    <!-- 語言視窗 -->
+    <div id="lang-dialog" class="modal after-close lang-dialog fade">
+        <div class="modal-dialog">
+            <div class="modal-title">请选择语系</div>
+            <div class="modal-content">
+                <div class="lang-item-list">
+                    <a class="lang-item cn active">
+                        <i class="flag-icon"></i>
+                        <span>简体中文</span>
+                    </a>
+                    <a href="../en/game-hall.html" class="lang-item en">
+                        <i class="flag-icon"></i>
+                        <span>English</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a data-pop='lang-dialog' class="modal-close btn-close"></a>
+    </div>
+
+    <!-- 客服視窗 -->
+    <div id="service-dialog" class="modal service-dialog fade">
+        <div class="modal-dialog">
+            <a data-pop='service-dialog' class="modal-close btn-close"></a>
+            <div class="modal-title">WM在线客服</div>
+            <div class="modal-content">
+                <ul class="customer-chat">
+                    <li class="user-box">
+                        <div class="photo">
+                            <img src="resource/images/photo-demo1.png">
+                        </div>
+                        <div class="message">
+                            <p class="username">Hank Chang
+                                <span>03-21 18:24</span>
+                            </p>
+                            <p class="chat_info">遊戲怎麼玩?</p>
+                        </div>
+                    </li>
+                    <li class="customer-box">
+                        <div class="photo">
+                            <img src="resource/images/photo-demo2.png">
+                        </div>
+                        <div class="message">
+                            <p class="username">客服
+                                <span>03-21 18:24</span>
+                            </p>
+                            <p class="chat_info">欢迎来到 WM，请问有什么地方能为您服务？</p>
+                        </div>
+                    </li>
+                    <li class="user-box">
+                        <div class="photo">
+                            <img src="resource/images/photo-demo1.png">
+                        </div>
+                        <div class="message">
+                            <p class="username">Hank Chang
+                                <span>03-21 18:24</span>
+                            </p>
+                            <p class="chat_info">遊戲怎麼玩?遊戲怎麼玩?遊戲怎麼玩?遊戲怎麼玩?遊戲怎麼玩?遊戲怎麼玩?</p>
+                        </div>
+                    </li>
+                    <li class="customer-box">
+                        <div class="photo">
+                            <img src="resource/images/photo-demo2.png">
+                        </div>
+                        <div class="message">
+                            <p class="username">客服
+                                <span>03-21 18:24</span>
+                            </p>
+                            <p class="chat_info">欢迎来到 WM，请问有什么地方能为您服务？</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <form class="send-message-form" action="">
+                <div class="message-input-wrapper">
+                    <input type="text" placeholder="请输入讯息..." class="message-input">
+                    <input type="submit" name="chat" id="sendbtn" value="发送" class="send-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!--
+    <template id="personal_report">
+        <div class="pages-header">
+            <h1>个人报表</h1>
+        </div>
+
+        <div class="pages-content scroll">
+            <div class="person-report-wrapper">
+                <div class="search-bar-con">
+                    <form>
+                        <div class="row">
+                            <input class="date" type="date" value="2018-03-21">
+                            <input class="date" type="date" value="2018-03-20">
+                            <input class="acc-btn-1 submit" type="btn" value="查询">
+                        </div>
+                        <div class="row">
+                            <select class="col-10">
+                                <option value="">全部类型</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="data-table-con" id="bet_info">
+                    <table class="acc-table acc-table-1">
+                        <thead>
+                            <tr>
+                                <th width="25%">时间</th>
+                                <th width="25%">动作</th>
+                                <th width="25%" class="aright">金额</th>
+                                <th width="25%" class="aright">盈亏</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="item in bet_info">
+                                <td>
+                                    <p>
+                                        {{item[created_at]}}
+                                    </p>
+                                </td>
+                                <td class="acenter">
+                                    {{item[game_name]}}
+                                </td>
+                                <td class="aright">
+                                    {{item[valid_bet_amount]}}
+                                </td>
+                                <td class="aright">
+                                    {{item[win_loss_amount]}}
+                                </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="fix-data-con">
+            <table class="acc-table acc-table-2">
+                <thead>
+                    <th width="25%"></th>
+                    <th width="25%" class="acenter">總計</th>
+                    <th width="25%" class="aright">600</th>
+                    <th width="25%" class="aright">-2458</th>
+                </thead>
+            </table>
+        </div>
+    </template>
+    -->
+
+    <!-- 背景遮罩 -->
+    <div id="modal-backdrop" class="modal-backdrop"></div>
+
+    <script src="js/jweixin-1.0.0.js"></script>
+    <script src="js/marquee.js?id=f2619ff525e29847f931"></script>
+    <script src="js/demo.js?id=f2619ff525e29847f931"></script>
+    <script>
+        $(document).ready(function () {
+            $('.home-marquee').marquee({
+                duration: 8000
+            });
+        });
+        /*
+        var app2 = new Vue({
+          el: "#app",
+          data () {
+            return {
+              info: null
+            }
+          },
+          mounted () {
+            axios.get('./data.json', "", {
+              headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'crossDomain': true
+                },
+              responseType: 'json'
+            }).then((response) => {
+              this.info = response['data']['datas'];
+            });
+          }
+        });
+        */
+        
+        // Vue.component('bet-log-list', {
+        //     template: '#personal_report'
+        // });
+
+        // var vm = new Vue({
+        //     el: '#app_personal_report'
+        // });
+
+    </script>
+
+    <!-- vue component -->
+
+    <!-- <script type="module" src="js/components/bet_log_list.vue"></script>     -->
+    <script src="js/bet-log-list.js"></script>
+    <script src="js/cash-flow-list.js"></script>
+    <script src="js/agent-list.js"></script>
+</body>
+
+</html>
