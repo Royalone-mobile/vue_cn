@@ -5,9 +5,9 @@
                 <div class="search-bar-con">
                     <form>
                         <div class="row">
-                            <input class="date" type="date" v-model="start_date">
-                            <input class="date" type="date" v-model="end_date">
-                            <input class="acc-btn-1 submit" type="button" value="查询" v-on:click="filter()">
+                            <input class="date" type="date" v-model="start_date"/>
+                            <input class="date" type="date" v-model="end_date"/>
+                            <input class="acc-btn-1 submit" type="button" value="查询" v-on:click="filter()"/>
                         </div>
                         <div class="row">
                             <select class="col-10" v-model="cur_game_name">

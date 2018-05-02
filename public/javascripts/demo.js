@@ -60,29 +60,29 @@ var popWindowEvent = {
 // 彈窗按鈕對應
 var popUpWindow = () => {
 
-  var eEnterPoint = null;
+  // var eEnterPoint = null;
 
-  // open
-  gElems.popItemBtn.forEach((e, i) => {
-    e.addEventListener('click', () => {
-      var popWindow = document.querySelector('#' + e.getAttribute('data-pop'));
-      popWindowEvent.open(popWindow, e);
+  // // open
+  // gElems.popItemBtn.forEach((e, i) => {
+  //   e.addEventListener('click', () => {
+  //     var popWindow = document.querySelector('#' + e.getAttribute('data-pop'));
+  //     popWindowEvent.open(popWindow, e);
 
-      eEnterPoint = (!e.classList.contains('user-center-btn')) ? true : false;
+  //     eEnterPoint = (!e.classList.contains('user-center-btn')) ? true : false;
 
-      // if (!e.classList.contains('fix-bottom-btn')) {
-      //   gElems.fixBottomBtnElem[0].click();
-      // }
-    });
-  });
+  //     // if (!e.classList.contains('fix-bottom-btn')) {
+  //     //   gElems.fixBottomBtnElem[0].click();
+  //     // }
+  //   });
+  // });
 
-  // close
-  gElems.popCloseBtn.forEach((e, i) => {
-    e.addEventListener('click', () => {
-      var popWindow = document.querySelector('#' + e.getAttribute('data-pop'));
-      popWindowEvent.close(popWindow, eEnterPoint);
-    });
-  })
+  // // close
+  // gElems.popCloseBtn.forEach((e, i) => {
+  //   e.addEventListener('click', () => {
+  //     var popWindow = document.querySelector('#' + e.getAttribute('data-pop'));
+  //     popWindowEvent.close(popWindow, eEnterPoint);
+  //   });
+  // })
 };
 
 // pages link
@@ -139,7 +139,7 @@ var pagesMain = () => {
 var soundObj = {};
 var homeSound = () => {
 
-  var bgSound = 'media/bg_sound.mp3';
+  var bgSound = 'public/media/bg_sound.mp3';
   var lastSeen;
   var loop = () => {
     lastSeen = Date.now();
@@ -180,7 +180,7 @@ homeSound();
 // 語言切換
 var languageSound = (lang) => {
   var fxSound = new Audio();
-  fxSound.src = 'media/welcom_' + lang + '.mp3';
+  fxSound.src = 'public/media/welcom_' + lang + '.mp3';
 
   function soundPlay() {
     fxSound.play();
@@ -367,6 +367,28 @@ var resizeInit = function () {
 
 // 首頁頁面初始
 var homePageInit = function () {
+
+  gElems = {
+    bodyElem: document.querySelector('body'),
+    maskPlane: document.querySelector('#modal-backdrop'),
+    btnLang: document.querySelector('#btn-language'),
+    btnSound: document.querySelector('#btn-sound'),
+    popItemBtn: Array.from(document.querySelectorAll('.btn-pop')),
+    popCloseBtn: Array.from(document.querySelectorAll('.btn-close')),
+    langItemBtn: Array.from(document.querySelectorAll('.lang-item')),
+    homeLinkBar: document.querySelector('.home-link-bar'),
+    pageLoadBox: document.querySelector('.pages-loading-box'),
+    pagesLoadingTxt: document.querySelector('.pages-loading-txt'),
+    pagesLoadingEnter: document.querySelector('.pages-loading-enter'),
+    fixBottomBtnElem: Array.from(document.querySelectorAll('.home-fix-bottom-box > .fix-bottom-btn')),
+    eventListItem: Array.from(document.querySelectorAll('.event-item-list > .event-item')),
+    eventBannerCloseBtns: Array.from(document.querySelectorAll('.event-banner-close-btn')),
+    eventScrollBanner: document.querySelector('#event-scroll-banner'),
+    pagesBtns: Array.from(document.querySelectorAll('.btn-pages')),
+    pagesContainer: document.querySelector('.pages-container'),
+    pagesMain: Array.from(document.querySelectorAll('.pages-container > .pages-main')),
+    pagesClose: document.querySelector('.pages-container > .close-btn')
+  }
 
   // loading banner
   var swiper = new Swiper('.guide-swiper-container', {

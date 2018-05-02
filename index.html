@@ -14,21 +14,19 @@
     <meta name="csrf-token" content="ZeQipUdvBNrJPGLcfKIEuKmvLgjaEInNkWLn1ya0">
     <meta name="notify-msg" content="">
     <meta name="notify-type" content="">
-    <link rel='stylesheet prefetch' href='resource/bootstrap/css/bootstrap.min.css'>
-    <link rel="stylesheet" type="text/css" href="css/swiper.min.css?id=7d13c156c6c8bdaf6193">
-    <!-- <link rel="stylesheet" type="text/css" href="css/game_hall.css?id=7d13c156c6c8bdaf6193"> -->
-    <link rel="stylesheet" type="text/css" href="css/game_hall_new.css?id=7d13c156c6c8bdaf6193">
     <title>WM 微信投注游戏大厅</title>
-    <script src="resource/lib/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src='resource/bootstrap/js/bootstrap.min.js'></script> -->
-    <script src='js/imagesloaded.pkgd.min.js'></script>
-    <script src='js/swiper.min.js'></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 
-    <script src="js/vue-2.5.17.js" type="text/javascript"></script>
-    <script src="https://unpkg.com/http-vue-loader@1.3.2"></script>
-    <!-- <script src="js/httpVueLoader.js" type="text/javascript"></script> -->
+    <link rel='stylesheet prefetch' type="text/css" href='public/resource/bootstrap/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="public/css/swiper.min.css?id=7d13c156c6c8bdaf6193">
+    <link rel="stylesheet" type="text/css" href="public/css/game_hall_new.css?id=7d13c156c6c8bdaf6193">
+
+    <script src="public/javascripts/jquery/1.9.1/jquery.min.js"></script>
+    <script src="public/javascripts/axios@0.18.0.min.js"></script>
+    <script src='public/javascripts/imagesloaded.pkgd.min.js'></script>
+    <script src='public/javascripts/swiper.min.js'></script>
+
+    <script src="public/javascripts/vue/vue-2.5.17.js" type="text/javascript"></script>
+    <script src="public/javascripts/http-vue-loader@1.3.2.js" type="text/javascript"></script>
 
     <script>
         window.langName = 'cn';
@@ -48,10 +46,10 @@
             <div class="swiper-container guide-swiper-container">
                 <div class="swiper-wrapper guide-photo-wrapper">
                     <div class="swiper-slide guide-photo">
-                        <img src="images/loading/guide-2.jpg" alt="">
+                        <img src="public/images/loading/guide-2.jpg" alt="">
                     </div>
                     <div class="swiper-slide guide-photo">
-                        <img src="images/loading/guide-1.jpg" alt="">
+                        <img src="public/images/loading/guide-1.jpg" alt="">
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -64,188 +62,7 @@
 
     <!-- main content -->
     <div class="main-container" id="root-app">
-        <div class="context home-context">
-            <!-- 頂部固定區 -->
-            <div class="home-fix-top-box">
-                <a data-page-name="news" class="btn-news btn-pages">
-                    <span class="btn-news-icon new-news"></span>
-                </a>
-                <div class="home-marquee">
-                    <p>欢迎来到WM微投，可添加WM客服微信:wm000 ,将有专人为您服务</p>
-                </div>
-            </div>
-            <!-- 廣告輪播區 -->
-            <div class="home-swiper-wrapper">
-                <a id="btn-language" data-pop="lang-dialog" class="btn-pop btn-language cn">
-                    <span class="language-flag-icon flag-icon"></span>
-                </a>
-                <a id="btn-sound" class="btn-sound">
-                    <span class="sound-icon"></span>
-                </a>
-                <div class="swiper-container home-swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="images/b_rc.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/b_sp.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/b_lo.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/b_sl.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <!-- 中間按鈕條 -->
-            <div class="home-link-bar">
-                <a data-pop="about-dialog" class="home-link-btn about-wm btn-pop">
-                    <span>关于</span>
-                    <i class="wm-icon"></i>
-                </a>
-                <a data-page-name="wallet-center" class="home-link-btn btn-pages">
-                    <span>充提中心</span>
-                </a>
-                <a class="home-link-btn free-play">
-                    <span>免费试玩</span>
-                </a>
-            </div>
-            <!-- 主項目 -->
-            <div class="home-content">
-                <!-- 遊戲清單 -->
-                <div class="gamelist-wrapper">
-                    <div class="gamelist-row">
-                        <div class="gamelist-col">
-                            <a class="gamelist-item column hot">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i101.png)"></div>
-                                <div class="game-name">微投百家</div>
-                            </a>
-                        </div>
-                        <div class="gamelist-col">
-                            <a class="gamelist-item">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i102.png)"></div>
-                                <div class="game-name">微投龙虎</div>
-                            </a>
-                            <a class="gamelist-item">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i104.png)"></div>
-                                <div class="game-name">微投轮盘</div>
-                            </a>
-                        </div>
-                        <div class="gamelist-col">
-                            <a class="gamelist-item">
-                                <div class="game-image h" style="background-image: url(resource/images/mid_i103.png)"></div>
-                                <div class="game-name">微投骰宝</div>
-                            </a>
-                            <a class="gamelist-item">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i105.png)"></div>
-                                <div class="game-name">微投牛牛</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="gamelist-row">
-                        <div class="gamelist-col">
-                            <a class="gamelist-item column hot">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i201.png)"></div>
-                                <div class="game-name">微投利鑫彩票</div>
-                            </a>
-                        </div>
-                        <div class="gamelist-col">
-                            <a class="gamelist-item">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i202.png)"></div>
-                                <div class="game-name">VR
-                                    <br> 直播彩票
-                                </div>
-                            </a>
-                            <a class="gamelist-item new">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i204.png)"></div>
-                                <div class="game-name">WM体育</div>
-                            </a>
-                        </div>
-                        <div class="gamelist-col">
-                            <a class="gamelist-item">
-                                <div class="game-image h" style="background-image: url(resource/images/mid_i203.png);"></div>
-                                <div class="game-name">微投
-                                    <br> 北京赛车
-                                </div>
-                            </a>
-                            <a class="gamelist-item">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i205.png)"></div>
-                                <div class="game-name">竞猜体育</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="gamelist-row">
-                        <div class="gamelist-col">
-                            <a class="gamelist-item column">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i301.png)"></div>
-                                <div class="game-name">直播老虎机</div>
-                            </a>
-                        </div>
-                        <div class="gamelist-col">
-                            <a class="gamelist-item">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i302.png)"></div>
-                                <div class="game-name">PlaynGo
-                                    <br> 老虎机
-                                </div>
-                            </a>
-                            <a data-pop="about-dialog" class="gamelist-item btn-pop">
-                                <div class="game-image svg" style="background-image: url(resource/images/svg/mid_i304.svg)"></div>
-                                <div class="game-name">代理加盟</div>
-                            </a>
-                        </div>
-                        <div class="gamelist-col">
-                            <a class="gamelist-item">
-                                <div class="game-image" style="background-image: url(resource/images/mid_i303.png)"></div>
-                                <div class="game-name">直播斗鸡</div>
-                            </a>
-                            <a data-pop="invite-dialog" class="gamelist-item btn-pop">
-                                <div class="game-image svg" style="background-image: url(resource/images/svg/mid_i305.svg)"></div>
-                                <div class="game-name">邀请好友</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 活動區塊 -->
-                <div class="event-photos">
-                    <div class="event-row">
-                        <div class="event-col col-100">
-                            <img src="images/event/event_01.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="event-row">
-                        <div class="event-col col-100">
-                            <img src="images/event/event_02.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 底部按鈕 -->
-            <div class="home-fix-bottom-box">
-                <a data-menu="home" class="fix-bottom-btn active">
-                    <span class="fix-bottom-btn-icon btn-1"></span>
-                    <strong>大厅</strong>
-                </a>
-                <a data-page-name="user-center" data-menu="user" class="fix-bottom-btn btn-pages">
-                    <span class="fix-bottom-btn-icon btn-2"></span>
-                    <strong>个人中心</strong>
-                </a>
-                <a data-menu="mobile" data-pop="mobile-dialog" class="fix-bottom-btn mobile-download btn-pop">
-                    <span class="fix-bottom-btn-icon btn-3"></span>
-                    <strong>手机下载</strong>
-                </a>
-                <a data-menu="event" data-pop="event-dialog" class="fix-bottom-btn btn-pop">
-                    <span class="fix-bottom-btn-icon btn-4 new-news"></span>
-                    <strong>优惠活动</strong>
-                </a>
-                <a data-menu="service" data-pop="service-dialog" class="fix-bottom-btn btn-service btn-pop">
-                    <span class="fix-bottom-btn-icon btn-5"></span>
-                    <strong>在线客服</strong>
-                </a>
-            </div>
-        </div>
+        <home></home>
     </div>
 
     <!-- pages content -->
@@ -875,7 +692,7 @@
             <div class="swiper-slide event-banner-box">
                 <a class="event-banner-close-btn"></a>
                 <div class="event-photo">
-                    <img src="images/event/pre_01.jpg" alt="">
+                    <img src="public/images/event/pre_01.jpg" alt="">
                 </div>
                 <div class="event-pagination"></div>
                 <div class="event-intro">
@@ -887,7 +704,7 @@
             <div class="swiper-slide event-banner-box">
                 <a class="event-banner-close-btn"></a>
                 <div class="event-photo">
-                    <img src="images/event/pre_02.jpg" alt="">
+                    <img src="public/images/event/pre_02.jpg" alt="">
                 </div>
                 <div class="event-pagination"></div>
                 <div class="event-intro">
@@ -899,7 +716,7 @@
             <div class="swiper-slide event-banner-box">
                 <a class="event-banner-close-btn"></a>
                 <div class="event-photo">
-                    <img src="images/event/pre_03.jpg" alt="">
+                    <img src="public/images/event/pre_03.jpg" alt="">
                 </div>
                 <div class="event-pagination"></div>
                 <div class="event-intro">
@@ -911,7 +728,7 @@
             <div class="swiper-slide event-banner-box">
                 <a class="event-banner-close-btn"></a>
                 <div class="event-photo">
-                    <img src="images/event/pre_04.png" alt="">
+                    <img src="public/images/event/pre_04.png" alt="">
                 </div>
                 <div class="event-pagination"></div>
                 <div class="event-intro">
@@ -975,7 +792,7 @@
         <div class="modal-dialog">
             <div class="modal-content h100">
                 <div class="mobile-download-wrap">
-                    <img width="100%" src="images/mobile_download_01.png" alt="">
+                    <img width="100%" src="public/images/mobile_download_01.png" alt="">
                     <h3 class="mobile-download-title">下载APP领奖金!</h3>
                     <a class="go-stroe-btn">前往 APP Store</a>
                 </div>
@@ -990,7 +807,7 @@
             <div class="modal-content h100">
                 <div class="invite-wrap">
                     <div class="invite-photo">
-                        <img src="images/event/pre_04.png" alt="">
+                        <img src="public/images/event/pre_04.png" alt="">
                     </div>
                     <div class="invite-code">
                         <p>您的邀请码</p>
@@ -1104,14 +921,14 @@
                 <div class="about-wrap">
                     <div class="row">
                         <a href="http://wm-casino.com" target="blank">
-                            <img src="images/about/about_img01.jpg" alt="WM完美娱乐">
+                            <img src="public/images/about/about_img01.jpg" alt="WM完美娱乐">
                         </a>
                         <h1>跨足实体赌场、多方位博彩园区</h1>
                         <p>WM完美娱乐所提供的产品和服务均由柬埔寨政府（Democratic Kampuchea）授权和监管，并拥有实体赌场营业执照。</p>
                     </div>
                     <div class="row">
                         <a href="http://lixin588.com/" target="blank">
-                            <img src="images/about/about_img02.jpg" alt="WM加盟介紹">
+                            <img src="public/images/about/about_img02.jpg" alt="WM加盟介紹">
                         </a>
                         <h1>自有独立现金网系统平台,让代理安心经营</h1>
                         <p>ＷＭ将与科技平台做结合，与您一起打造最完美的人生，领先他人就趁现在！联系我们,成功即在弹指之间。</p>
@@ -1186,7 +1003,7 @@
                 <ul class="customer-chat">
                     <li class="user-box">
                         <div class="photo">
-                            <img src="resource/images/photo-demo1.png">
+                            <img src="public/resource/images/photo-demo1.png">
                         </div>
                         <div class="message">
                             <p class="username">Hank Chang
@@ -1197,7 +1014,7 @@
                     </li>
                     <li class="customer-box">
                         <div class="photo">
-                            <img src="resource/images/photo-demo2.png">
+                            <img src="public/resource/images/photo-demo2.png">
                         </div>
                         <div class="message">
                             <p class="username">客服
@@ -1208,7 +1025,7 @@
                     </li>
                     <li class="user-box">
                         <div class="photo">
-                            <img src="resource/images/photo-demo1.png">
+                            <img src="public/resource/images/photo-demo1.png">
                         </div>
                         <div class="message">
                             <p class="username">Hank Chang
@@ -1219,7 +1036,7 @@
                     </li>
                     <li class="customer-box">
                         <div class="photo">
-                            <img src="resource/images/photo-demo2.png">
+                            <img src="public/resource/images/photo-demo2.png">
                         </div>
                         <div class="message">
                             <p class="username">客服
@@ -1312,54 +1129,24 @@
     <!-- 背景遮罩 -->
     <div id="modal-backdrop" class="modal-backdrop"></div>
 
-    <script src="js/jweixin-1.0.0.js"></script>
-    <script src="js/marquee.js?id=f2619ff525e29847f931"></script>
-    <script src="js/demo.js?id=f2619ff525e29847f931"></script>
+    <!-- vue containers -->
+    <script src="src/containers/Home/home.js"></script>
+
+    <!-- vue component -->
+    <script src="src/components/BetLog/bet-log-list.js"></script>
+    <script src="src/components/CashFlow/cash-flow-list.js"></script>
+    <script src="src/components/Agent/agent-list.js"></script>
+
+    <!-- Libraries -->
+    <script src="public/javascripts/jweixin-1.0.0.js"></script>
+    <script src="public/javascripts/marquee.js?id=f2619ff525e29847f931"></script>
+    <script src="public/javascripts/demo.js?id=f2619ff525e29847f931"></script>
     <script>
         $(document).ready(function () {
             $('.home-marquee').marquee({
-                duration: 8000
+                duration: 3000
             });
         });
-        /*
-        var app2 = new Vue({
-          el: "#app",
-          data () {
-            return {
-              info: null
-            }
-          },
-          mounted () {
-            axios.get('./data.json', "", {
-              headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'crossDomain': true
-                },
-              responseType: 'json'
-            }).then((response) => {
-              this.info = response['data']['datas'];
-            });
-          }
-        });
-        */
-        
-        // Vue.component('bet-log-list', {
-        //     template: '#personal_report'
-        // });
-
-        // var vm = new Vue({
-        //     el: '#app_personal_report'
-        // });
-
     </script>
-
-    <!-- vue component -->
-
-    <!-- <script type="module" src="js/components/bet_log_list.vue"></script>     -->
-    <script src="js/bet-log-list.js"></script>
-    <script src="js/cash-flow-list.js"></script>
-    <script src="js/agent-list.js"></script>
 </body>
-
 </html>

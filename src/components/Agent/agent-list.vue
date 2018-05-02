@@ -13,9 +13,9 @@
                 <div class="search-bar-con">
                     <form>
                         <div class="row">
-                            <input class="date" type="date" value="2018-03-21">
-                            <input class="date" type="date" value="2018-03-20">
-                            <input class="acc-btn-1 submit" type="btn" value="查询">
+                            <input class="date" type="date" value="2018-03-21"/>
+                            <input class="date" type="date" value="2018-03-20"/>
+                            <input class="acc-btn-1 submit" type="btn" value="查询"/>
                         </div>
                         <div class="row">
                             <select class="col-10">
@@ -90,9 +90,7 @@
     </div>
 </template>
 
-
 <script>
-
     module.exports =  {
         components: {},
         data () {
@@ -124,5 +122,4 @@
             });
         }
     };
-
 </script>
